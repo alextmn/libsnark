@@ -1,3 +1,34 @@
+Alex Notes: Mac building
+===========================
+1. mkdir build
+2. cd build
+3. cmake -DWITH_PROCPS=OFF -DWITH_SUPERCOP=OFF  -DUSE_ASM=OFF ..
+4. make profile_r1cs_ppzksnark
+
+in profiling.cpp comment out (profiler is off)
+#290:  assert(*(--block_names.end()) == msg);
+
+VS CODE w MS C++ plagin (launch.json):
+--------------------------------------
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            
+            "name": "Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "stopAtEntry": false,
+            "MIMode": "lldb",
+            "cwd": "${workspaceFolder}",
+            "args": ["1000","10","bytes"],
+            "program": "../profile_r1cs_ppzksnark"
+        }]
+   
+}
+
+
 libsnark: a C++ library for zkSNARK proofs
 ================================================================================
 

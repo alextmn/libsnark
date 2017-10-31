@@ -1,9 +1,20 @@
-Alex Notes: Mac building
+Alex Notes: libsnark Mac building instructions
 ===========================
-1. mkdir build
-2. cd build
-3. cmake -DWITH_PROCPS=OFF -DWITH_SUPERCOP=OFF  -DUSE_ASM=OFF ..
-4. make profile_r1cs_ppzksnark
+
+Prerequisites 
+---------------
+1. MacPorts download and install
+2. brew install cmake
+3. brew install pkg-config
+3. port install boost 
+
+Building
+---------------
+1. git submodule init && git submodule update
+2. mkdir build
+3. cd build
+4. cmake -DWITH_PROCPS=OFF -DWITH_SUPERCOP=OFF  -DUSE_ASM=OFF ..
+5. make profile_r1cs_ppzksnark
 
 in profiling.cpp comment out (profiler is off)
 #290:  assert(*(--block_names.end()) == msg);

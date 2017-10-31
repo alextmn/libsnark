@@ -1,17 +1,17 @@
-
 {
     "version": "0.2.0",
     "configurations": [
         {
             
+            "externalConsole": false,
             "name": "Launch",
             "type": "cppdbg",
             "request": "launch",
             "stopAtEntry": false,
             "MIMode": "lldb",
             "cwd": "${workspaceFolder}",
-            "args": ["1000","10","bytes"],
-            "program": "/Users/alex/projects/libsnark-mac/libsnark/build/libsnark/profile_r1cs_ppzksnark"
+            "args": ["100","10","Fr"],
+            "program": "${workspaceFolder}/build/libsnark/profile_r1cs_ppzksnark"
         }]
    
 }

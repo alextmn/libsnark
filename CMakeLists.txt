@@ -215,6 +215,11 @@ if("${PERFORMANCE}")
   )
 endif()
 
+set(
+    CMAKE_EXE_LINKER_FLAGS
+    "${CMAKE_EXE_LINKER_FLAGS} -L/opt/local/lib"
+  )
+
 if("${USE_ASM}")
   add_definitions(-DUSE_ASM)
 endif()
